@@ -1,0 +1,58 @@
+/* Email client compatibility styles */
+.email-wrapper {
+  width: 100% !important;
+  max-width: 600px !important;
+  margin: 0 auto !important;
+  padding: 20px !important;
+  background-color: #ffffff !important;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif !important;
+  line-height: 1.5 !important;
+  -webkit-text-size-adjust: 100% !important;
+  -ms-text-size-adjust: 100% !important;
+}
+
+/* Outlook-specific fixes */
+[style*="margin"] {
+  margin: 0 !important;
+}
+
+/* Gmail mobile-specific fixes */
+@media only screen and (max-width: 480px) {
+  u ~ div .email-wrapper {
+    min-width: 100vw;
+  }
+  
+  .email-content {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Image responsiveness */
+.email-image {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  border: 0 !important;
+  outline: none !important;
+  text-decoration: none !important;
+  -ms-interpolation-mode: bicubic !important;
+}
+
+/* Text styles with fallbacks */
+.email-text {
+  margin: 0 !important;
+  padding: 10px 0 !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+  color: #333333 !important;
+}
+
+/* Spacer with MSO support */
+.email-spacer {
+  display: block !important;
+  width: 100% !important;
+  font-size: 0 !important;
+  mso-hide: all !important;
+}
